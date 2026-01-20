@@ -1,0 +1,27 @@
+resources:
+  - ../../base-apps
+
+namePrefix: prod-
+commonLabels:
+  env: production
+
+images:
+  - name: devopsabbacr.azurecr.io/hello-abb
+    newTag: latest
+
+# This section overrides the empty values in your base/secret-provider.yaml
+patches:
+  - target:
+      kind: SecretProviderClass
+      name: hello-abb-secrets
+    patch: |-
+      - op: replace
+        path: /spec/parameters/userAssignedIdentityID
+        value: "d8cc8071-7283-4d46-ab0b-ecce0991bbbd"
+  - target:
+      kind: Deployment
+      name: hello-abb
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/volumes/0/csi/volumeAttributes/secretProviderClass
+        value: "prod-hello-abb-secrets"

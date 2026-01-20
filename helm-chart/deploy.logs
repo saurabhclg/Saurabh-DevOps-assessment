@@ -1,0 +1,8 @@
+Run helm upgrade --install hello-abb-release ./charts/hello-abb \
+Release "hello-abb-release" does not exist. Installing it now.
+NAME: hello-abb-release
+LAST DEPLOYED: Mon Jan 19 23:48:07 2026
+NAMESPACE: helm-deployment
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None

@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: devopsabbacr.azurecr.io/hello-abb
+  tag: latest
+  pullPolicy: Always
+
+# Azure Specific IDs (Empty by default, filled by GitHub Actions)
+azure:
+  tenantId: ""
+  keyvaultName: ""
+  userAssignedIdentityID: ""
+
+service:
+  type: ClusterIP
+  port: 3000

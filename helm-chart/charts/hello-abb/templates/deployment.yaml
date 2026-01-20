@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "hello-abb.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "hello-abb.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "hello-abb.fullname" . }}
+    spec:
+      containers:
+        - name: hello-abb
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          env:
+            - name: APP_MESSAGE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "hello-abb.fullname" . }}-k8s-secret
+                  key: APP_MESSAGE
+          volumeMounts:
+            - name: secrets-store-inline
+              mountPath: "/mnt/secrets-store"
+              readOnly: true
+      volumes:
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: {{ include "hello-abb.fullname" . }}-secrets

@@ -1,0 +1,15 @@
+# Use a slim version of Node for a smaller footprint
+FROM node:18-slim
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+EXPOSE 3000
+CMD [ "npm", "start" ]

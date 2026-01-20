@@ -1,0 +1,14 @@
+Run echo "Targeting Environment: dev"
+Targeting Environment: dev
+Resource Group: rg-aks-dev
+Cluster: aks-dev
+# Warning: 'commonLabels' is deprecated. Please use 'labels' instead. Run 'kustomize edit fix' to update your Kustomization automatically.
+service/dev-hello-abb-service unchanged
+deployment.apps/dev-hello-abb configured
+secretproviderclass.secrets-store.csi.x-k8s.io/dev-hello-abb-secrets unchanged
+8s
+Run # Checks if the pods start correctly
+Waiting for deployment "dev-hello-abb" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "dev-hello-abb" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "dev-hello-abb" rollout to finish: 1 old replicas are pending termination...
+deployment "dev-hello-abb" successfully rolled out
