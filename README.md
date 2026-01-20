@@ -14,14 +14,14 @@ The following image shows the subscription error observed during deployment:
 - Please reffer [branching-strategy](branching-strategy.md) file.
 
 
-# 🧑‍💻 CI and CD pipelines
+# CI and CD pipelines
 
 - Build, Test and Deploy logs for "main_hello-abb.yml" can be found here: https://github.com/saurabhclg/hello-abb/actions/runs/21134101870
 
 - BUILD, Test and Deploy logds for Containerize workflow: [CI_CD_pipeline/containerize_hello-abb.yml](./CI_CD_pipeline/containerize_hello-abb.yml) , can be found here : https://github.com/saurabhclg/hello-abb/actions/runs/21150379981
 
 
-# 🧑‍💻 Multi-staged pipelines | Terraform AKS deployment | Approval gates for production | Secret management 
+# Multi-staged pipelines | Terraform AKS deployment | Approval gates for production | Secret management 
 
 These all task are acheived by this repo: https://github.com/saurabhclg/terraform-aks-demo
 
@@ -34,9 +34,15 @@ These all task are acheived by this repo: https://github.com/saurabhclg/terrafor
 - In case of DEV deployment it runs without any manual approval but in case of PROD manual approval is required.
 
 ### Terraform AKS Deployment
+- ![aks-deployment](images/aks-overview.png)
+- State file can be found here [tf-state](terraform-aks-deployment/aks.tfstate)
+- storage accrount overview: ![Storage-account](images/tf_state_image.png)
 - You can refer to the [main.tf](terraform-aks-deployment/modules/aks/main.tf)
 - tf files can be found here: https://github.com/saurabhclg/terraform-aks-demo/tree/main/modules/aks
 - Output logs can be found here: https://github.com/saurabhclg/terraform-aks-demo/actions/runs/21153842107/job/60835367416 
+
+### ACR : Azure Container Registry
+![ACR](images/aks-overview.png)
 
 ### Approval gates for prodcurion 
 
@@ -54,6 +60,8 @@ These all task are acheived by this repo: https://github.com/saurabhclg/terrafor
 # Dockerized application
 - Dockerfile can be found here [Dockerfile](./dockerized-applications/Dockerfile)
 - build and push log can be found here: [build_push.logs](./dockerized-applications/dockerbuild_push.log)
+### Aplication out after port-forwarding:
+![Hello ABB](images/application_output.png)
 
 # Kubernetes Deployment
 - Applications are deployed using github actions worflow.

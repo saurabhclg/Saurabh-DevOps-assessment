@@ -17,7 +17,15 @@
 
 ### PR Screen short
 
-- ![PR Screenshot](images/PR_screenshot.png)
+- ![PR Screenshot](images/PR_Overview.png)
+
+### PR Change Log
+
+- ![PR Changelog](images/PR_Change_log.png)
+
+### PR Final view
+
+- ![PR Final View](images/PR_Approval_final_view.png)
 
 ### Main Branch Setup
 - ![Main Branch](./images/main_banch.png)
