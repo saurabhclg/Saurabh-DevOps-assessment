@@ -15,4 +15,9 @@
 5. Merge to `develop`
 6. Release branch → merge to `main`
 
+### PR Screen short
 
+- ![PR Screenshot](images/PR_screenshot.png)
+
+### Main Branch Setup
+- ![Main Branch](./images/main_banch.png)
