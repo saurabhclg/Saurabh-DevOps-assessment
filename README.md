@@ -99,3 +99,9 @@ These all task are acheived by this repo: https://github.com/saurabhclg/terrafor
 - Details of job can be found here: https://github.com/saurabhclg/hello-abb/actions/runs/21164128200/job/60864717403
 - Report can be found here: [report.txt](secure-containerimage/report.txt)
 
+# Kubernetes-network-issue
+- Please check [network-issue-folder](kubernetes-network-issue/network-issue-resolved.md)
+
+# Cost Optimization :
+- Please check [cost-optimization](cost-optimization/cost-optimization.md)
+
