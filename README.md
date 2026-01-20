@@ -1,6 +1,6 @@
 # Hello ABB
 
-I hope you guys are doing well, So finally get ready to see almost all the task whcih was provided as questionaries to me. So lets jumm to one by one topic quickly
+I hope you guys are doing well, So finally get ready to see almost all the task whcih was provided as questionaries to me. So lets jump to one by one topic quickly
 
 Since I was getting some error with my Azure subscription so, I have created the pipeline using GitHub Actions workflow, please find the error message below:
 ## Error screenshot
