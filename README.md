@@ -36,13 +36,13 @@ These all task are acheived by this repo: https://github.com/saurabhclg/terrafor
 ### Terraform AKS Deployment
 - ![aks-deployment](images/aks-overview.png)
 - State file can be found here [tf-state](terraform-aks-deployment/aks.tfstate)
-- storage accrount overview: ![Storage-account](images/tf_state_image.png)
+### storage account overview: ![Storage-account](images/tf_state_image.png)
 - You can refer to the [main.tf](terraform-aks-deployment/modules/aks/main.tf)
 - tf files can be found here: https://github.com/saurabhclg/terraform-aks-demo/tree/main/modules/aks
 - Output logs can be found here: https://github.com/saurabhclg/terraform-aks-demo/actions/runs/21153842107/job/60835367416 
 
 ### ACR : Azure Container Registry
-![ACR](images/aks-overview.png)
+![ACR](images/Acr_overview.png)
 
 ### Approval gates for prodcurion 
 
